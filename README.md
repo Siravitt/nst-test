@@ -14,5 +14,8 @@
 ## Testing
 	npm test
 
+## Coding Conventions
+* Use [jest](https://jestjs.io/) for testing
+
 ## Authors
 Siravit Thaenrattanavijit Siravitt.tan@gmail.com
