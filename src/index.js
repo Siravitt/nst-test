@@ -1,6 +1,22 @@
 // shuffling
 const shuffling =(str) => {
+  if (str.length < 2 ) {
+    return [str]
+  }
 
+  let permutationsArray = [];
+
+  for (let i = 0; i < str.length; i++) {
+    let char = str[i];
+    if (str.indexOf(char) != i) continue; // duplicate
+
+    let remainingChars = str.slice(0, i) + str.slice(i + 1, str.length);
+
+    for (let permutation of shuffling(remainingChars)) {
+      permutationsArray.push(char + permutation);
+    }
+  }
+  return permutationsArray
 }
 
 // find odd int
